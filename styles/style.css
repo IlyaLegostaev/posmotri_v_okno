@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
 }
 
 h1,
@@ -42,7 +45,7 @@ ol {
   max-width: 1140px;
   height: 534px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: end;
   gap: 30px;
 }
@@ -259,9 +262,9 @@ input:focus-visible {
   border-right: 1px solid #FFF;
 }
 
-.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
+  display: block;
   margin: 1px;
   width: 15px;
   height: 15px;
